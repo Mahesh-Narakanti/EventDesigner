@@ -373,7 +373,12 @@ h1,h2 {
 
 
 
-
+.fonts{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
 
 
 .myH2 {
