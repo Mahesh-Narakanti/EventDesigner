@@ -88,7 +88,10 @@ h1,h2 {
     height: 50vh; 
     background-size: cover; 
     background-position: center top;
-    font-family:Brush Script MT; 
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
     font-size:1.5cm; 
     padding-top: 1cm; 
     margin: 0.5cm;
@@ -444,4 +447,12 @@ ul {
   font-size: 14px;
       color: #7e7e7e;
   line-height: 28px;
+}
+
+
+.fonts{
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
