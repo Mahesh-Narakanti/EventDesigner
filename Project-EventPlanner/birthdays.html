@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="gallery.css">
+  <style>
+    article{
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    article:hover{
+        transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 221, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+              <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </div>
+</nav>
+<h1 style="font-family:'Brush Script MT'; font-size: 1.5cm; text-align: center; margin-top: 1cm; margin-bottom: 1cm;">Please select the design you like</h1>
+<section class="gallery">
+    <article>
+      <a href="final.html?decoration=BDecoration1"><img src="https://www.njpartyshop.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/b/i/birthday_decorations_-_black_silver_golden_-_led_neon_happy_birthday_-_model_1006.jpg" alt="Decoration 1"></a>
+      <div>Decoration 1</div>
+    </article>
+    <br><br>
+    <article>
+      <a href="final.html?decoration=BDecoration2"><img src="https://www.jiomart.com/images/product/original/rvzca7pwk9/groovy-dudz-10th-happy-birthday-decoration-for-girls-boys-birthday-decoration-items-for-room-56-pc-product-images-orvzca7pwk9-p603772749-0-202308111118.jpg?im=Resize=(1000,1000)" alt="Decoration 2"></a>
+      <div>Decoration 2</div>
+    </article>
+    <br><br>
+    <article>
+      <a href="final.html?decoration=BDecoration3"><img src="https://rukminim2.flixcart.com/image/850/1000/kvr01ow0/birthday-combo/k/c/d/purple-birthday-decorations-kit-81pcs-birthday-decoration-for-original-imag8hfgabgzx6de.jpeg?q=20&crop=false" alt="Decoration 3"></a>
+      <div>Decoration 3</div>
+    </article>
+    <br><br>
+    <article>
+        <a href="final.html?decoration=BDecoration4"><img src="https://media.licdn.com/dms/image/D4D12AQFwvwR4DEm6YQ/article-cover_image-shrink_720_1280/0/1688191661906?e=2147483647&v=beta&t=YP5VP6l43yIm3C6AR64onW6wiQ8JjOdWgq69vSgL1IU" alt="Decoration 3"></a>
+        <div>Decoration 3</div>
+      </article>
+      <br><br>
+      <article>
+        <a href="final.html?decoration=BDecoration5"><img src="https://miro.medium.com/v2/resize:fit:1000/1*EDdrfNqNcGz-WGY1Dc_1nA.jpeg" alt="Decoration 3"></a>
+        <div>Decoration 3</div>
+      </article>
+      <br><br>
+      <article>
+        <a href="final.html?decoration=BDecoration6"><img src="https://midaasevents.co.in/storage/package/pmYJrt1uszBlH2WBjPqSgTgXH8pW43EzWTELZoY4.png" alt="Decoration 3"></a>
+        <div>Decoration 3</div>
+      </article>
+      <br><br>
+      <article>
+        <a href="final.html?decoration=BDecoration7"><img src="https://admin.balloonsunlimited.in/media/catalog/product/cache/07ff1bef447d7f72136ad0e853c05785/1/0/1004_2.jpg" alt="Decoration 3"></a>
+        <div>Decoration 3</div>
+      </article>
+      
+    <!-- Add more articles as needed -->
+  </section>
+  
+<footer class="footer-section" id="contact">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span>1010 Avenue, sw 54321, chandigarh</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>9876543210 0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span>mail@info.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+<script>
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+            $('.nav').addClass('affix');
+            console.log("OK");
+        } else {
+            $('.nav').removeClass('affix');
+        }
+    });
+    $('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn();
+
+});
+
+</script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

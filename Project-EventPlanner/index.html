@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+              <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#event">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </div>
+</nav>
+
+<section class="home">
+  <h1 style=" color:rgb(7, 7, 7); font-family:Brush Script MT; font-size:1.5cm; padding-top: 7cm; padding-left: 1cm;  text-align: center;">  Raju's <br> event Designers and Planners
+  </h1>
+</section>
+
+<div>
+  <h1 style="font-family:'Brush Script MT'; font-size: 1.5cm; text-align: center; margin-top: 2cm;">What we Offer ?</h1>
+  <h2 style="font-family:'Brush Script MT'; font-size: 1cm; text-align: center; margin-bottom: 1cm;">Everything for every Event <br></h2>
+  <div id="event">
+      <ul style="color: white; list-style-type: none; padding: 0;" >
+        <li><button onclick="window.location.href='birthdays.html';" class="events" style=" background-image: url(https://files.123freevectors.com/wp-content/original/509918-colorful-happy-birthday-background.jpg); ">Birthdays</button></li>
+        <br>
+        <li><button onclick="window.location.href='rice.html';" class="events" style=" background-image: url(https://images.meesho.com/images/products/275482097/msqvp_512.webp); ">Rice Ceremony</button></li>
+        <br>
+        <li><button onclick="window.location.href='naming.html';" class="events" style=" background-image: url(https://i.pinimg.com/736x/72/c3/9f/72c39f646cb04bb9fff5799d8a4d4369.jpg); ">Naming Ceremony</button></li>
+        <br>
+        <li><button onclick="window.location.href='halfsaree.html';" class="events" style=" background-image: url(https://i.pinimg.com/originals/60/4f/3f/604f3feef79d74375232f57a952a4b70.jpg); ">Half Saree ceremony</button></li>
+        <br>
+        <li><button onclick="window.location.href='marriage.html';" class="events" style=" background-image: url(https://stylishgrooms.files.wordpress.com/2017/02/decorations-cheap-cheap-and-gorgeous-ideas-for-wedding-decoration-decoration-wedding-decoration-party.jpg); ">Marriage</button></li>
+        <br>
+        <li><button onclick="window.location.href='house.html';" class="events" style=" background-image: url(https://miro.medium.com/v2/resize:fit:800/1*hRDsEVgLGxoJWO6fk3w46A.png); ">House Warming ceremony</button></li>
+        <br>
+        <li><button onclick="window.location.href='party.html';" class="events" style=" background-image: url(https://www.homelane.com/blog/wp-content/uploads/2022/02/shutterstock_614687651.jpg); ">Party</button></li>
+      </ul>
+  </div>
+</div>
+<br><br><br><br><br><br><br><br>
+<footer class="footer-section" id="contact">
+  <div class="container">
+      <div class="footer-cta pt-5 pb-5">
+          <div class="row">
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <div class="cta-text">
+                          <h4>Find us</h4>
+                          <span>1010 Avenue, sw 54321, chandigarh</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="fas fa-phone"></i>
+                      <div class="cta-text">
+                          <h4>Call us</h4>
+                          <span>9876543210 0</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="far fa-envelope-open"></i>
+                      <div class="cta-text">
+                          <h4>Mail us</h4>
+                          <span>mail@info.com</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+<!-- Jquery needed -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+<script>
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+            $('.nav').addClass('affix');
+            console.log("OK");
+        } else {
+            $('.nav').removeClass('affix');
+        }
+    });
+    $('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn();
+
+});
+
+</script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

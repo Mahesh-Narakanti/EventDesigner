@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="gallery.css">
+  <style>
+    article{
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    article:hover{
+        transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 221, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+              <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="index.html">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </div>
+</nav>
+<h1 style="font-family:'Brush Script MT'; font-size: 1.5cm; text-align: center; margin-top: 1cm; margin-bottom: 1cm;">Please select the design you like</h1>
+<section class="gallery">
+    <article>
+      <a href="final.html?decoration=NDecoration1"><img src="https://chintupartyandevents.in/wp-content/uploads/2023/07/Cradle-Flowers-Decorations-For-Naming-Ceremony-in-Bangalore.jpg" alt="Decoration 1"></a>
+      <div>Decoration 1</div>
+    </article>
+    <br><br>
+    <article>
+      <a href="final.html?decoration=NDecoration2"><img src="https://5.imimg.com/data5/ANDROID/Default/2023/7/328074352/GV/XB/WO/193585878/product-jpeg.jpg" alt="Decoration 2"></a>
+      <div>Decoration 2</div>
+    </article>
+    <br><br>
+    <article>
+      <a href="final.html?decoration=NDecoration3"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1uYhoR8ozyv4nHN2zClzuIhI8NeXSQF03D4BwlRSzpw&s" alt="Decoration 3"></a>
+      <div>Decoration 3</div>
+    </article>
+    <br><br>
+    <article>
+        <a href="final.html?decoration=NDecoration4"><img src="https://cheetah.cherishx.com/uploads/1690269424_webp_original.webp" alt="Decoration 3"></a>
+        <div>Decoration 3</div>
+      </article>
+      <br><br>
+      <article>
+        <a href="final.html?decoration=NDecoration5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrqkTCAFiqyk-CJFe92X2skkPeVR55AiVubrZIFnFdaA&s" alt="Decoration 3"></a>
+        <div>Decoration 3</div>
+      </article>
+      <br><br>
+      <article>
+        <a href="final.html?decoration=NDecoration6"><img src="https://cdn.togetherv.com/baby-girl-naming-ceremony-decor-3_1678082818.webp" alt="Decoration 3"></a>
+        <div>Decoration 3</div>
+      </article>
+      <br><br>
+      <article>
+        <a href="final.html?decoration=NDecoration7"><img src="https://www.giftlaya.com/admin/api/public/images/1678955611.jpg" alt="Decoration 3"></a>
+        <div>Decoration 3</div>
+      </article>
+      
+    <!-- Add more articles as needed -->
+  </section>
+  
+<footer class="footer-section" id="contact">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span>1010 Avenue, sw 54321, chandigarh</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>9876543210 0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span>mail@info.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+<script>
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+            $('.nav').addClass('affix');
+            console.log("OK");
+        } else {
+            $('.nav').removeClass('affix');
+        }
+    });
+    $('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn();
+
+});
+
+</script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

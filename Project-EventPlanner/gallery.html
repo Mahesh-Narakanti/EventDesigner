@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="gallery.css">
+
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+              <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </div>
+</nav>
+<br>
+<br>
+<br>
+<h2 style="font-family:'Brush Script MT'; font-size: 1cm; text-align: center; margin-bottom: 1cm;">Here take a dive into our past memories</h2>
+<section class="gallery">
+    <div>
+      <article>
+        <img src="https://i.ytimg.com/vi/TSQ3jDxSdCo/mqdefault.jpg" alt="motorbike 1">
+        <div><span class="material-symbols-outlined material-fill-1">favorite</span>12 Likes</div>
+      </article>
+      <article>
+        <img src="https://images.ctfassets.net/6m9bd13t776q/J3qGglUh4blOurlk0OnOV/2f89cc88c5e6c43a9da700599abb32e0/one-der-the-sea-first-birthday-party-the-dixon-schwabls.png?q=75" alt="motorbike 2">
+        <div><span class="material-symbols-outlined material-fill-1">favorite</span>23 Likes</div>
+      </article>
+      <article>
+        <img src="https://as2.ftcdn.net/v2/jpg/03/52/63/91/1000_F_352639199_y344O90r4CGQBwgVUZTOcsb5vguFxhyl.jpg" alt="notorbike 3">
+        <div><span class="material-symbols-outlined material-fill-1">favorite</span>6 Likes</div>
+      </article>
+  
+    </div>
+    <div>
+      <article>
+        <img src="https://img1.wsimg.com/isteam/ip/9b32cde9-8a4b-4ae1-a25b-c072a5585a43/Cradle%20ceremony%20Jayanagar%205-9f6619c.jpg" alt="mountains 1">
+        <div><span class="material-symbols-outlined material-fill-1">favorite</span>22 Likes</div>
+      </article>
+      <article>
+        <img src="https://i.pinimg.com/736x/42/9b/af/429baf18cbb66c62afa1fcb44918dd6e.jpg" alt="hand">
+        <div><span class="material-symbols-outlined material-fill-1">favorite</span>18 Likes</div>
+      </article>
+      <article>
+        <img src="https://vshoot.com/wp-content/uploads/2023/10/6.png" alt="beach">
+        <div><span class="material-symbols-outlined material-fill-1">favorite</span>145 Likes</div>
+      </article>
+  
+    </div>
+    <div>
+      <article>
+        <img src="https://isteam.wsimg.com/ip/9b32cde9-8a4b-4ae1-a25b-c072a5585a43/171A7708.jpg/:/" alt="man on rock">
+        <div><span class="material-symbols-outlined material-fill-1">favorite</span>145 Likes</div>
+      </article>
+      <article>
+        <img src="https://www.kairagiftworld.com/cdn/shop/products/IMG_20220411_194649_443_1200x1200.jpg?v=1650552012" alt="trees">
+        <div><span class="material-symbols-outlined material-fill-1">favorite</span>98 Likes</div>
+      </article>
+      <article>
+        <img src="https://anilevents.in/wp-content/uploads/2020/05/IMG-20180129-WA0024-e1700418509993.jpg" alt="sky">
+        <div><span class="material-symbols-outlined material-fill-1">favorite</span>37 Likes</div>
+      </article>
+  
+    </div>
+  
+  </section>
+  
+<footer class="footer-section" id="contact">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span>1010 Avenue, sw 54321, chandigarh</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>9876543210 0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span>mail@info.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+<script>
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+            $('.nav').addClass('affix');
+            console.log("OK");
+        } else {
+            $('.nav').removeClass('affix');
+        }
+    });
+    $('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn();
+
+});
+
+</script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

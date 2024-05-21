@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decoration Details</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="gallery.css">
+  <style>
+   body {
+  font-family: Arial, sans-serif;
+}
+
+.decoration-info {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.decoration-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.decoration-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1,p{
+    display: block;
+}
+ input{
+    max-width: 7cm;
+    margin-left: 2cm;
+ }
+.decoration-form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  text-align: left;
+}
+
+.decoration-form .form-control {
+  border-radius: 5px;
+  width: 80%; /* Reduced width of input fields */
+}
+
+.btn {
+    margin-left: 4.7cm;
+    margin-top: 1cm;
+    margin-bottom: 2cm;
+    width: 2cm;
+}
+
+#thankYouMessage {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#event">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </div>
+  </nav>
+  <br><br>
+  <br>
+  <br>
+  <section class="gallery" id="decoration-details">
+    <!-- The content here will be updated by JavaScript -->
+  </section>
+  
+  <footer class="footer-section" id="contact">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span>1010 Avenue, sw 54321, Chandigarh</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>9876543210 0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span>mail@info.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script>
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+            $('.nav').addClass('affix');
+            console.log("OK");
+        } else {
+            $('.nav').removeClass('affix');
+        }
+    });
+    $('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn();
+});
+  
+    // JavaScript to handle URL parameters and update content
+    function getParameterByName(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    const decorationName = getParameterByName('decoration');
+    const decorationDetails = {
+        'BDecoration1': {
+            img: 'https://www.njpartyshop.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/b/i/birthday_decorations_-_black_silver_golden_-_led_neon_happy_birthday_-_model_1006.jpg',
+           
+        },
+        'BDecoration2': {
+            img: 'https://www.jiomart.com/images/product/original/rvzca7pwk9/groovy-dudz-10th-happy-birthday-decoration-for-girls-boys-birthday-decoration-items-for-room-56-pc-product-images-orvzca7pwk9-p603772749-0-202308111118.jpg?im=Resize=(1000,1000)',
+            
+        },
+        'BDecoration3': {
+            img: 'https://rukminim2.flixcart.com/image/850/1000/kvr01ow0/birthday-combo/k/c/d/purple-birthday-decorations-kit-81pcs-birthday-decoration-for-original-imag8hfgabgzx6de.jpeg?q=20&crop=false',
+            
+        },
+        'BDecoration4': {
+            img: 'https://media.licdn.com/dms/image/D4D12AQFwvwR4DEm6YQ/article-cover_image-shrink_720_1280/0/1688191661906?e=2147483647&v=beta&t=YP5VP6l43yIm3C6AR64onW6wiQ8JjOdWgq69vSgL1IU',
+           
+        },
+        'BDecoration5': {
+            img: 'https://miro.medium.com/v2/resize:fit:1000/1*EDdrfNqNcGz-WGY1Dc_1nA.jpeg',
+            
+        },
+        'BDecoration6': {
+            img: 'https://midaasevents.co.in/storage/package/pmYJrt1uszBlH2WBjPqSgTgXH8pW43EzWTELZoY4.png',
+            
+        },
+        'BDecoration7': {
+            img: 'https://admin.balloonsunlimited.in/media/catalog/product/cache/07ff1bef447d7f72136ad0e853c05785/1/0/1004_2.jpg',
+            
+        },
+        'RDecoration1': {
+            img: 'https://m.media-amazon.com/images/I/81cieON8kAL.jpg',
+           
+        },
+        'RDecoration2': {
+            img: 'https://images.glowroad.com/faceview/db/gg/g3b/c3f/imgs/pd/1694620264316_annaprashan-xlgn400x400.jpg?productId=P-21386766',
+            
+        },
+        'RDecoration3': {
+            img: 'https://rukminim2.flixcart.com/image/850/1000/xif0q/birthday-combo/s/a/g/annaprashan-decoration-item-for-baby-girl-rice-ceremony-original-imagq6bffr8nqjxw.jpeg?q=20&crop=false',
+            
+        },
+        'RDecoration4': {
+            img: 'https://prepare2party.in/wp-content/uploads/2022/06/ANNAPRASHAN-DECORATION-2.jpeg',
+           
+        },
+        'RDecoration5': {
+            img: 'https://5.imimg.com/data5/SELLER/Default/2023/8/336374621/JR/PA/DB/47694279/rice-ceremony-decoration.jpg',
+            
+        },
+        'RDecoration6': {
+            img: 'https://m.media-amazon.com/images/I/716vU8R8DlL.jpg',
+            
+        },
+        'RDecoration7': {
+            img: 'https://rukminim2.flixcart.com/image/850/1000/xif0q/birthday-combo/i/4/s/rice-ceremony-decoration-items-annaprashan-decoration-rice-original-imagt6gys4shhxtm.jpeg?q=90&crop=false',
+            
+        },
+        'NDecoration1': {
+            img: 'https://chintupartyandevents.in/wp-content/uploads/2023/07/Cradle-Flowers-Decorations-For-Naming-Ceremony-in-Bangalore.jpg',
+           
+        },
+        'NDecoration2': {
+            img: 'https://5.imimg.com/data5/ANDROID/Default/2023/7/328074352/GV/XB/WO/193585878/product-jpeg.jpg',
+            
+        },
+        'NDecoration3': {
+            img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1uYhoR8ozyv4nHN2zClzuIhI8NeXSQF03D4BwlRSzpw&s',
+            
+        },
+        'NDecoration4': {
+            img: 'https://cheetah.cherishx.com/uploads/1690269424_webp_original.webp',
+           
+        },
+        'NDecoration5': {
+            img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrqkTCAFiqyk-CJFe92X2skkPeVR55AiVubrZIFnFdaA&s',
+            
+        },
+        'NDecoration6': {
+            img: 'https://cdn.togetherv.com/baby-girl-naming-ceremony-decor-3_1678082818.webp',
+            
+        },
+        'NDecoration7': {
+            img: 'https://www.giftlaya.com/admin/api/public/images/1678955611.jpg',
+            
+        },
+        'HDecoration1': {
+            img: 'https://cdn0.weddingwire.in/vendor/1299/3_2/960/jpg/img-20160625-wa0066_15_51299-1562256858.jpeg',
+           
+        },
+        'HDecoration2': {
+            img: 'https://images.squarespace-cdn.com/content/v1/56cfe57de32140703d5d0d3e/1645458818021-WFP2CYDNG9W9D3Q9QYJ9/JP2_5686.jpg',
+            
+        },
+        'HDecoration3': {
+            img: 'https://image.wedmegood.com/resized/450X/uploads/project/168450/1640573217_IMG20211114104318.jpg',
+            
+        },
+        'HDecoration4': {
+            img: 'https://img1.wsimg.com/isteam/ip/9b32cde9-8a4b-4ae1-a25b-c072a5585a43/eb7138e1-4c38-4a12-820d-c489aefa073b.jpeg/:/',
+           
+        },
+        'HDecoration5': {
+            img: 'https://i.ytimg.com/vi/M0a29irgyxY/maxresdefault.jpg',
+            
+        },
+        'HDecoration6': {
+            img: 'https://admin.balloonsunlimited.in/media/catalog/product//l/o/lotustheme2.jpg',
+            
+        },
+        'HDecoration7': {
+            img: 'https://symphonyevents.com.au/wp-content/uploads/2021/08/saree-function-04.jpg',
+            
+        },
+        'MDecoration1': {
+            img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQerxQJkBK7LmvVYrUvKHaIdTd39M2H4znHc8tU7xmuA&s',
+           
+        },
+        'MDecoration2': {
+            img: 'https://image.wedmegood.com/resized/540X/uploads/member/506391/1685681308_IMG_20230225_WA0018.jpg?crop=90,312,809,455',
+            
+        },
+        'MDecoration3': {
+            img: 'https://i.pinimg.com/736x/01/94/2b/01942b76e3881fe416184d7bf5350f69.jpg',
+            
+        },
+        'MDecoration4': {
+            img: 'https://5.imimg.com/data5/RN/FV/FP/SELLER-39609937/marriage-decoration.jpg',
+           
+        },
+        'MDecoration5': {
+            img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAHDrJpG2z-8MR9lHn5kJQWoD3hwPcodjQy2AxlwgFnw&s',
+            
+        },
+        'MDecoration6': {
+            img: 'https://avsamevents.in/wp-content/uploads/2021/03/8-min.jpg',
+            
+        },
+        'MDecoration7': {
+            img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk_ymIbz9sJCtkV6Ebavp93lL7zC7OGYNiaGUnbnb35Q&s',
+            
+        },
+        'HoDecoration1': {
+            img: 'https://i0.wp.com/decorsutrablog.com/wp-content/uploads/2020/06/Decorsutra_HomeBasedEvents_floraindiadesigns4-1.jpg?fit=1070%2C774&ssl=1',
+           
+        },
+        'HoDecoration2': {
+            img: 'https://www.chennaieventmanagementservice.com/images/services/h2.jpg',
+            
+        },
+        'HoDecoration3': {
+            img: 'https://i1.wp.com/decorsutrablog.com/wp-content/uploads/2020/06/Decorsutra_HomeBasedEvents_DecorbyKrishna1-1.jpg?fit=780%2C521&ssl=1',
+            
+        },
+        'HoDecoration4': {
+            img: 'https://cdn.shopify.com/s/files/1/0674/5289/5554/files/House_warming_ganpati_pooja_decor_480x480.jpg?v=1679553847',
+           
+        },
+        'HoDecoration5': {
+            img: 'https://www.nobroker.in/blog/wp-content/uploads/2022/07/Adorn-the-mandir.jpeg',
+            
+        },
+        'HoDecoration6': {
+            img: 'https://i2.wp.com/decorsutrablog.com/wp-content/uploads/2020/06/Decorsutra_HomeBasedEvents_ArtoholicEvents1-1.jpg?fit=780%2C942&ssl=1',
+            
+        },
+        'HoDecoration7': {
+            img: 'https://i.pinimg.com/originals/a9/4e/be/a94ebedd786a1106170abb86d26c9c22.jpg',
+            
+        },
+        'PDecoration1': {
+            img: 'https://www.oyorooms.com/blog/wp-content/uploads/2018/02/How-much-space-does-it-has.png',
+           
+        },
+        'PDecoration2': {
+            img: 'https://www.bookmyballoons.in/wp-content/uploads/2016/03/Simple-Birthday-Party-Decoration.jpg',
+            
+        },
+        'PDecoration3': {
+            img: 'https://enchantmentdecor.com/wp-content/uploads/2021/02/outdoor19-min-1.jpg',
+            
+        },
+        'PDecoration4': {
+            img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO0wy_MFgpRzIma8bfG4s1zsUNVlqiwL3yCfKI8smrVQ&s',
+           
+        },
+        'PDecoration5': {
+            img: 'https://www.brides.com/thmb/RZOjRr8P6Ox2kZrz9pHYZ_Hr2PM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/studiothisis-d98ab5539cbe4c20b45474497fcabd3e.jpg',
+            
+        },
+        'PDecoration6': {
+            img: 'https://www.homelane.com/blog/wp-content/uploads/2022/02/shutterstock_614687651.jpg',
+            
+        },
+        'PDecoration7': {
+            img: 'https://cdn.greenvelope.com/blog/wp-content/uploads/outdoor-wedding-setting-2.jpeg',
+            
+        },
+    };
+
+    const details = decorationDetails[decorationName];
+    if (details) {
+        const gallerySection = document.getElementById('decoration-details');
+        gallerySection.innerHTML = `
+            <h1 >${decorationName}</h1>
+            <br>
+            <br>
+            <img src="${details.img}" alt="${decorationName}" style="width: 100%;">
+            <br>
+            <br>
+            <p style="font-family:'Brush Script MT'; font-size: 1cm; text-align: center; margin-bottom: 1cm;"">'A perfect Design for your celebration.'</p>
+            <form id="decorationForm" action="mailto:narakantimahesh@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="decorationType">Type of Decoration</label>
+                    <input type="text" class="form-control" id="decorationType" name="decorationType" value="${decorationName}" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="eventDate">Date of Event</label>
+                    <input type="date" class="form-control" id="eventDate" name="eventDate" required>
+                </div>
+                <input type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div id="thankYouMessage" style="display:none;">
+                <h3>Thank you for your time!</h3>
+                <p style="font-family:'Brush Script MT'; font-size: 1cm; text-align: center; margin-bottom: 1cm;"">Your request has been sent to the admin.</p>
+                
+            </div>
+        `;
+    } else {
+        // Handle the case where the decoration name is not found
+        const gallerySection = document.getElementById('decoration-details');
+        gallerySection.innerHTML = `
+            <h1>Decoration Not Found</h1>
+            <p style="font-family:'Brush Script MT'; font-size: 1cm; text-align: center; margin-bottom: 1cm;"">The requested decoration was not found.</p>
+            <button class="btn btn-primary" onclick="window.location.href='index.html';">Back to Birthday Decorations</button>
+        `;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('decorationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.getElementById('decorationForm').style.display = 'none';
+        document.getElementById('thankYouMessage').style.display = 'block';
+        // You won't need to send the form data to the server if you're using mailto
+        // Here the browser's default email client will handle sending the email
+        window.location.href = 'mailto:narakantimahesh@gmail.com?subject=Decoration Form Submission&body=' + encodeURIComponent(getFormData());
+    });
+});
+
+function getFormData() {
+    const formData = new FormData(document.getElementById('decorationForm'));
+    let body = '';
+    for (const [key, value] of formData.entries()) {
+        body += `${key}: ${value} ` +'       ';
+    }
+    return body;
+}
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
